@@ -22,6 +22,7 @@ import { Bibliography } from 'react-bib'
 <Bibliography
   mode='print'
 />
+
 ```
 ## Reference
 
