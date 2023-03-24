@@ -26,7 +26,7 @@ import { Bibliography } from 'react-bib'
 ## Reference
 
 | prop  | type  | default  | functionality  |
-|---|---|---|---|---|
+|-------|-------|----------|----------------|
 | mode  | string   | - |  input: accepts citation number and source, print: prints collected stations as a list. |
 | num  | number   | - |  Citation number to show inline and bibliography order under the page |
 |  source | string  | -  | The citation source  |
