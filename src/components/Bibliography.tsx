@@ -10,13 +10,14 @@ export interface IBibliographyProps
   mode: 'input' | 'print'
   num?: number
   source?: string
+  tooltipProps?: object
 }
 
 const bib = new Map()
 export const Bibliography: React.FunctionComponent<IBibliographyProps> = (
   props
 ) => {
-  const { style, mode, num = 0, source } = props
+  const { style, mode, num = 0, source, tooltipProps } = props
   let _style: React.CSSProperties = style || { listStyle: 'none' }
   const wrapUrlWithAnchorTag = (str: string, cite?: string) => {
     const regex =
@@ -65,6 +66,7 @@ export const Bibliography: React.FunctionComponent<IBibliographyProps> = (
     bib.set(num, source)
     return (
       <Tooltip
+        {...tooltipProps}
         title={wrapUrlWithAnchorTag(bib.get(num))}
         color='black'
         style={{ display: 'inline' }}
